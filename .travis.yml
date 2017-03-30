@@ -5,3 +5,10 @@ script:
 - bundle exec rake db:migrate --trace
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
+deploy:
+  provider: heroku
+  api_key:
+    secure: ma/+gZLbwejnY8APT5kwC2/Gp+p6KCsOczL3XKD39XtwPbMqivVqmrYdbIhDUQqjvDkDMnqDUezgcZ4myYndS22p8BLh9jwS1pZXUdbhwr6evqn5fQVwakyLGpgEAnwe/48/vKQszdHtHsj9y/QlEqlQa+XkrO6nCRwv7DYjzx4e7Gwwt5u4lsEEEKQ+GOjIHW1y0MITJ4rbz88WgKhB5BM8G2SjqOEEZLWZ7TQYxl794upx8P2VfBd24a4qW+iNDeho29y3v3IbPqsjxhaVyBo0S6O5fIpsWXlQL97BC6XTZ3RUXNgKxT3Urdw+poI0gzJSwOvCSWqxlvMWHPMVFxguJ4N/Xn5ZcEva/CqZKGq4G6JgnBUrJqONbk/EHAeB7cL3/3+lY7fssDnXlESQPt2FZqf448diXJnAUKO17IDnvmcP8VUSSh86cQ60cXm/9bpi0JPSkuydMoIm3ZPW+OZxy405CN04uqt5qzYzNmoqUWkwztEfQ/1aecGSnVX3gMsbmz51tCmwIqZoFWPlYTTyie2E+n4aJ88oxeza4o+PFZtoY1R9MRpznXnU8HgQBzcdFYKCZSjAsM5dyRZIhJvNqDEdAh8TCbhTz6jGvAMcVqvPwGbrcpRMIVsTlpD5pMZcS8U722Is3YrYoPAB72vPaG1J6FyXKRMVkaxn914=
+  app: bibtext
+  on:
+    repo: ScrumMestarit/ohtu-miniprojekti
