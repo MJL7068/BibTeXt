@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @page.url %>
+</p>
+
+<table class="table table-hover">
+  <thead>
+	<tr>
+	  <th> Author  </th>
+  	  <th> Title  </th>
+	</tr>
+  </thead>
+
+  <tbody>
+	<% @page.get_references.each do |ref| %>
+	  <tr>
+		<td><%= ref.author %> </td>
+  		<td><%= ref.title %> </td>
+	  </tr>
+	<% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
