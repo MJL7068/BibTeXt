@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!-- <p>
   <strong>Url:</strong>
   <%= @page.url %>
-</p>
+</p> -->
 
 <table class="table table-hover">
   <thead>
@@ -24,5 +24,4 @@
 </table>
 
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<%= link_to 'Create new article reference', '/' + @page.id.to_s + '/new/article'  %>

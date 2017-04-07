@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-
+    #   @referrences = @page.get_references
   end
 
   # GET /pages/new
@@ -29,11 +29,9 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
-        format.json { render :show, status: :created, location: @page }
+        format.html { redirect_to '/' + @page.id.to_s, notice: 'Page was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -65,11 +63,11 @@ class PagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
-      @page = Page.find(params[:id])
+      @page = Page.find(params[:page_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:url)
+    #   params.require(:page)
     end
 end

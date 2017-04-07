@@ -10,11 +10,13 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+    @page = Page.find(params[:page_id])
   end
 
   # GET /articles/1/edit
@@ -24,15 +26,14 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    @page = Page.find(params[:page_id])
+    @article = Article.new(article_params.merge(:page_id => @page.id))
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+        format.html { redirect_to '/' + @page.id.to_s, notice: 'Article was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -65,6 +66,7 @@ class ArticlesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+      @page = Page.find(params[:page_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

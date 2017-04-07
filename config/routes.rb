@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :articles
   resources :pages
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :articles
+  get '/:page_id', to: 'pages#show'
+  get '/:page_id/new/article', to: 'articles#new'
+  get '/', to: 'pages#new'
+  post '/:page_id/articles', to: 'articles#create'
 end
