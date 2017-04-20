@@ -22,4 +22,11 @@
 </table>
 
 
+
+
 <%= link_to 'Create new article reference', '/' + @page.id.to_s + '/new/article'  %>
+
+<br> <br> <br> <br> <br>
+<h4> OUTPUT BIBTEX </h4>
+
+<textarea rows=30 cols=50 readonly><%= @page.to_bibtex %></textarea>
