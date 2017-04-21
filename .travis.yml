@@ -5,6 +5,7 @@ script:
 - bundle exec rake db:migrate --trace
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
+- bundle exec rspec
 deploy:
   skip_cleanup: true
   provider: heroku
