@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20170330151734) do
   end
 
   create_table "session", primary_key: "sid", id: :string, force: :cascade do |t|
-    t.json     "sess",                 null: false
+    t.column     "sess", :json,                 null: false
     t.datetime "expire", precision: 6, null: false
   end
 

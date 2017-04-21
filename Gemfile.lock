@@ -235,6 +235,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  capybara
   coffee-rails (~> 4.2)
   coveralls
   cucumber-rails
