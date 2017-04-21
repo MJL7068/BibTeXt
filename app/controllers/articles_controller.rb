@@ -69,5 +69,6 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:ref_key, :author, :journal, :title, :volume, :number, :pages, :year, :month, :note, :page_id)
-    end
+   end
+
 end
