@@ -1,12 +1,11 @@
-<h2> Your bibtex is saved to <%= link_to @url %> </a> SAVE THIS URL OR YOU WILL NOT BE ABLE TO ACCESS YOUR WORK </h2>
+<h2> Your bibtex is saved to <%= link_to @url %> </a> <span style="color: red">SAVE THIS URL OR YOU WILL NOT BE ABLE TO ACCESS YOUR WORK </span> </h2>
+<h4><%= link_to 'Back to main page', '/' %></h4>
+<br><br>
 
-<p id="notice"><%= notice %></p>
+<h2 style="margin-bottom: 4px">Articles &nbsp<span style="font-size: 16px"> <%= link_to 'Create new', '/' + @page.id.to_s + '/new/article'  %> </span> </h2>
 
-<!-- <p>
-  <strong>Url:</strong>
-  <%= @page.url %>
-</p> -->
-<h2>Articles</h2>
+<br>
+
 <table class="table table-hover">
   <thead>
     <% Article.rendered_fields.each do |f| %>
@@ -18,21 +17,13 @@
       <% Article.rendered_fields.each do |f| %>
         <td><%= article.send(f) %></td>
       <% end %>
-      <td><%= link_to 'Edit', '/' + @page.id.to_s + '/articles/' + article.id.to_s %></td>
+      <td style="font-weight: 600"><%= link_to 'Edit', '/' + @page.id.to_s + '/articles/' + article.id.to_s %></td>
     </tr>
   <% end %>
 </table>
 
 
-
-
-<%= link_to 'Create new article reference', '/' + @page.id.to_s + '/new/article'  %>
-
-<br> <br>
-<%= link_to 'Back', '/' %>
-
-<br> <br> <br> <br> <br>
-
+<br> <br> <br> <br>
 <h4> OUTPUT BIBTEX <h4 style="font-weight: bold">  <%= link_to 'Download', '/' + @page.id.to_s + '/export'  %> </h4> </h4>
 
 <textarea rows=30 cols=50 readonly><%= @page.to_bibtex %></textarea>

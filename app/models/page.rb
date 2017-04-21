@@ -1,7 +1,8 @@
 class Page < ApplicationRecord
+  before_create :randomize_id
   has_many :articles
   has_many :books
-  has_many :inproceedings
+  has_many :in_proceedings
 
   def get_articles
     Article.where(page_id: id)
@@ -36,5 +37,12 @@ class Page < ApplicationRecord
     end
 
     return output
+  end
+
+  private
+  def randomize_id
+    begin
+      self.id = rand(1000000...10000000)
+    end while Page.where(id: self.id).exists?
   end
 end
