@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    #   @referrences = @page.get_references
+    @url = request.original_url
   end
 
   # GET /pages/new
