@@ -1,6 +1,7 @@
 class Page < ApplicationRecord
   has_many :articles
-  has_many :page
+  has_many :books
+  has_many :inproceedings
 
   def get_articles
     Article.where(page_id: id)

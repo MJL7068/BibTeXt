@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :in_proceedings
   resources :books
   resources :pages
   resources :articles

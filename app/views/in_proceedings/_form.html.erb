@@ -1,0 +1,92 @@
+<%= form_for(in_proceeding) do |f| %>
+  <% if in_proceeding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(in_proceeding.errors.count, "error") %> prohibited this in_proceeding from being saved:</h2>
+
+      <ul>
+      <% in_proceeding.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ref_key %>
+    <%= f.text_field :ref_key %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :booktitle %>
+    <%= f.text_field :booktitle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :editor %>
+    <%= f.text_field :editor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :volume %>
+    <%= f.text_field :volume %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :series %>
+    <%= f.text_field :series %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pages %>
+    <%= f.text_field :pages %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :organization %>
+    <%= f.text_field :organization %>
+  </div>
+
+  <div class="field">
+    <%= f.label :publisher %>
+    <%= f.text_field :publisher %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :month %>
+    <%= f.text_field :month %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_field :note %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

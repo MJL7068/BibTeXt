@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421121333) do
+ActiveRecord::Schema.define(version: 20170421123429) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "ref_key"
@@ -43,6 +43,26 @@ ActiveRecord::Schema.define(version: 20170421121333) do
     t.string   "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "in_proceedings", force: :cascade do |t|
+    t.string   "ref_key"
+    t.string   "author"
+    t.string   "title"
+    t.string   "booktitle"
+    t.string   "editor"
+    t.string   "volume"
+    t.string   "number"
+    t.string   "series"
+    t.string   "pages"
+    t.string   "address"
+    t.string   "organization"
+    t.string   "publisher"
+    t.string   "year"
+    t.string   "month"
+    t.string   "note"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "pages", force: :cascade do |t|
