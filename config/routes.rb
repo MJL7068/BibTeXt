@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :books
   resources :pages
   resources :articles
   get '/:page_id', to: 'pages#show'
