@@ -59,10 +59,12 @@ class PagesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   # GET /:page_id/export
-  def export 
-      @page.to_bibtex
+  def export
+    send_data @page.to_bibtex,
+      :filename => "exported.bib",
+      :type => "application/text"
   end
 
   private
