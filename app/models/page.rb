@@ -13,7 +13,7 @@ class Page < ApplicationRecord
   end
 
   def get_inproceedings
-    InProceedings.where(page_id: id)
+    InProceeding.where(page_id: id)
   end
 
   def to_bibtex

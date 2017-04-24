@@ -1,6 +1,8 @@
 Given(/^new page is created$/) do
   visit "/"
-  click_on "Create Page"
+  within("Articles") do
+    click_on "Create new bibtex document"
+  end
 end
 
 When(/^article is created with key "(.*)", author "(.*)", journal "(.*)", title "(.*)", year "(.*)" are given$/) do

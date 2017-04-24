@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/antti/Projects/BibTeXt/spec/models/article_spec.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/models/article_spec.rb": [
         1,
         null,
         1,
@@ -19,7 +19,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/spec/rails_helper.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -81,14 +81,14 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/environment.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/antti/Projects/BibTeXt/config/application.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/application.rb": [
         1,
         null,
         1,
@@ -105,12 +105,12 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/boot.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/antti/Projects/BibTeXt/config/environments/test.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/environments/test.rb": [
         1,
         null,
         null,
@@ -154,7 +154,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/application_controller_renderer.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -162,7 +162,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/assets.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -175,7 +175,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/backtrace_silencers.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -184,20 +184,20 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/cookies_serializer.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/home/antti/Projects/BibTeXt/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/inflections.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -215,13 +215,13 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/mime_types.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/new_framework_defaults.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/new_framework_defaults.rb": [
         null,
         null,
         null,
@@ -247,12 +247,12 @@
         null,
         1
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/session_store.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/antti/Projects/BibTeXt/config/initializers/wrap_parameters.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -268,7 +268,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/spec/factories.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/factories.rb": [
         1,
         1,
         1,
@@ -283,7 +283,7 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/config/routes.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/config/routes.rb": [
         1,
         1,
         1,
@@ -292,56 +292,141 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/helpers/books_helper.rb": [
+        1,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/helpers/in_proceedings_helper.rb": [
+        1,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/models/article.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/home/antti/Projects/BibTeXt/app/models/article.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/models/book_spec.rb": [
         1,
         null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/home/antti/Projects/BibTeXt/app/models/application_record.rb": [
-        1,
         1,
         null
       ],
-      "/home/antti/Projects/BibTeXt/spec/models/page_spec.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/models/book.rb": [
+        1,
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/models/in_proceeding_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/models/in_proceeding.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
+        0,
+        0,
         null,
+        null
+      ],
+      "/home/juicyp/Tools/Ruby/BibTeXt/spec/models/page_spec.rb": [
+        1,
+        null,
+        1,
         1,
         1,
         1,
@@ -365,7 +450,10 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/app/models/page.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/models/page.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -377,6 +465,14 @@
         2,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
         null,
         2,
         2,
@@ -384,10 +480,27 @@
         null,
         null,
         2,
+        0,
+        0,
+        null,
+        null,
+        2,
+        0,
+        0,
+        null,
+        null,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        3,
+        3,
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/app/controllers/pages_controller.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
@@ -469,12 +582,12 @@
         null,
         null
       ],
-      "/home/antti/Projects/BibTeXt/app/controllers/application_controller.rb": [
+      "/home/juicyp/Tools/Ruby/BibTeXt/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1492779026
+    "timestamp": 1493019046
   }
 }

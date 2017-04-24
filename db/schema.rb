@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170421123429) do
-=======
-ActiveRecord::Schema.define(version: 20170330151734) do
->>>>>>> 05d52337310e726b0eed687ff43dca9afefd8631
+ActiveRecord::Schema.define(version: 20170424072234) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "ref_key"
@@ -32,7 +28,6 @@ ActiveRecord::Schema.define(version: 20170330151734) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "books", force: :cascade do |t|
     t.string   "ref_key"
     t.string   "author"
@@ -46,15 +41,11 @@ ActiveRecord::Schema.define(version: 20170330151734) do
     t.string   "year"
     t.string   "month"
     t.string   "note"
-=======
-  create_table "pages", force: :cascade do |t|
-    t.string   "url"
->>>>>>> 05d52337310e726b0eed687ff43dca9afefd8631
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "page_id"
   end
 
-<<<<<<< HEAD
   create_table "in_proceedings", force: :cascade do |t|
     t.string   "ref_key"
     t.string   "author"
@@ -73,6 +64,7 @@ ActiveRecord::Schema.define(version: 20170330151734) do
     t.string   "note"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "page_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -81,6 +73,4 @@ ActiveRecord::Schema.define(version: 20170330151734) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 05d52337310e726b0eed687ff43dca9afefd8631
 end
