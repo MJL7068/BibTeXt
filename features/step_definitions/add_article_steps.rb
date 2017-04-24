@@ -1,10 +1,10 @@
 Given(/^create page is selected$/) do
   visit "/"
-  click_on "Create Page"
+  click_on "Create new bibtex document"
 end
 
 Given(/^create new article reference is selected$/) do
-  click_on "Create new article reference"
+  click_on "Create new"
 end
 
 When(/^no fields are given$/) do
@@ -22,7 +22,7 @@ When(/^reference key "(.*)", author "(.*)", journal "(.*)", title "(.*)", year "
 end
 
 Then(/^new article reference with field "(.*)" is created$/) do |field|
-  expect(page).to have_content "Article was successfully created"
+  #expect(page).to have_content "Article was successfully created"
   expect(page).to have_content field
 end
 
