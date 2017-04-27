@@ -1,6 +1,8 @@
 class Article < ApplicationRecord
+    before_validation :generate_ref_key_if_empty
     belongs_to :page
 
+    validates :ref_key, presence: true
     validates :author, presence: true
     validates :title, presence: true
     validates :year, presence: true
@@ -24,5 +26,13 @@ class Article < ApplicationRecord
 
         str += "}"
         return str
+    end
+
+    private
+
+    def generate_ref_key_if_empty
+      if self.ref_key.blank?
+         self.ref_key = (author.to_s + title.to_s + year.to_s).delete(" \t\r\n").downcase
+      end
     end
 end

@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+  before_validation :generate_ref_key_if_empty
   belongs_to :page
 
   validates :ref_key, :author, :title, :publisher, :year, presence: true
@@ -23,5 +24,13 @@ class Book < ApplicationRecord
 
     str += "}"
     return str
+  end
+
+  private
+
+  def generate_ref_key_if_empty
+    if self.ref_key.blank?
+       self.ref_key = (author.to_s + title.to_s + year.to_s).delete(" \t\r\n").downcase
+    end
   end
 end

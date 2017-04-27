@@ -1,4 +1,5 @@
 class InProceeding < ApplicationRecord
+  before_validation :generate_ref_key_if_empty
   belongs_to :page
 
   validates :ref_key, presence: true
@@ -15,8 +16,8 @@ class InProceeding < ApplicationRecord
     str =  "@inproceedings{#{ref_key},\n";
     str += "     author    = \"#{author}\",\n"
     str += "     title     = \"#{title}\",\n"
-    str += "     booktitle = \"#{booktitle}\",\n" 
-    str += "     year      = \"#{year}\",\n" 
+    str += "     booktitle = \"#{booktitle}\",\n"
+    str += "     year      = \"#{year}\",\n"
     str += "     editor    = \"#{editor}\",\n" unless editor.blank?
     str += "     volume    = \"#{volume}\",\n" unless volume.blank?
     str += "     number    = \"#{number}\",\n" unless number.blank?
@@ -30,5 +31,13 @@ class InProceeding < ApplicationRecord
 
     str += "}"
     return str
+  end
+
+  private
+
+  def generate_ref_key_if_empty
+    if self.ref_key.blank?
+       self.ref_key = (author.to_s + title.to_s + year.to_s).delete(" \t\r\n").downcase
+    end
   end
 end
