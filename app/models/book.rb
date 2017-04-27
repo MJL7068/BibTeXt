@@ -1,11 +1,7 @@
 class Book < ApplicationRecord
   belongs_to :page
 
-  validates :ref_key, presence: true
-  validates :author, presence: true
-  validates :title, presence: true
-  validates :publisher, presence: true
-  validates :year, presence: true
+  validates :ref_key, :author, :title, :publisher, :year, presence: true
 
   def self.rendered_fields
     [:ref_key, :author, :title, :publisher, :volume, :number, :series, :address, :edition, :year, :month, :note]
@@ -16,7 +12,7 @@ class Book < ApplicationRecord
     str += "     author    = \"#{author}\",\n"
     str += "     title     = \"#{title}\",\n"
     str += "     publisher = \"#{publisher}\",\n"
-    str += "     year      = \"#{year}\",\n" 
+    str += "     year      = \"#{year}\",\n"
     str += "     volume    = \"#{volume}\",\n" unless volume.blank?
     str += "     number    = \"#{number}\",\n" unless number.blank?
     str += "     series    = \"#{series}\",\n"  unless series.blank?
