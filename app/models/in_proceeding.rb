@@ -12,7 +12,7 @@ class InProceeding < ApplicationRecord
   end
 
   def to_bibtex
-    str =  "@book{#{ref_key},\n";
+    str =  "@inproceedings{#{ref_key},\n";
     str += "     author    = \"#{author}\",\n"
     str += "     title     = \"#{title}\",\n"
     str += "     booktitle = \"#{booktitle}\",\n" 

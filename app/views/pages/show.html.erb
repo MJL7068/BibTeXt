@@ -7,21 +7,64 @@
 <br>
 
 <table class="table table-hover">
-  <thead>
-    <% Article.rendered_fields.each do |f| %>
-      <td><b><%=f %></b></td>
-    <% end %>
-  </thead>
-  <% @page.get_articles.each do |article| %>
-    <tr>
-      <% Article.rendered_fields.each do |f| %>
-        <td><%= article.send(f) %></td>
-      <% end %>
-      <td style="font-weight: 600"><%= link_to 'Edit', '/' + @page.id.to_s + '/articles/' + article.id.to_s %></td>
-    </tr>
-  <% end %>
+	<thead>
+		<% Article.rendered_fields.each do |f| %>
+			<td><b><%=f %></b></td>
+		<% end %>
+	</thead>
+	<% @page.get_articles.each do |article| %>
+		<tr>
+			<% Article.rendered_fields.each do |f| %>
+				<td><%= article.send(f) %></td>
+			<% end %>
+			<td style="font-weight: 600"><%= link_to 'Edit', '/' + @page.id.to_s + '/articles/' + article.id.to_s %></td>
+		</tr>
+	<% end %>
 </table>
 
+<br>
+
+<h2 style="margin-bottom: 4px">Books &nbsp<span style="font-size: 16px"> <%= link_to 'Create new', '/' + @page.id.to_s + '/new/book'  %> </span> </h2>
+
+<br>
+
+<table class="table table-hover">
+	<thead>
+		<% Book.rendered_fields.each do |f| %>
+			<td><b><%=f %></b></td>
+		<% end %>
+	</thead>
+	<% @page.get_books.each do |book| %>
+		<tr>
+			<% Book.rendered_fields.each do |f| %>
+				<td><%= book.send(f) %></td>
+			<% end %>
+			<td style="font-weight: 600"><%= link_to 'Edit', '/' + @page.id.to_s + '/books/' + book.id.to_s %></td>
+		</tr>
+	<% end %>
+</table>
+
+<br>
+
+<h2 style="margin-bottom: 4px">In-proceedings &nbsp<span style="font-size: 16px"> <%= link_to 'Create new', '/' + @page.id.to_s + '/new/in_proceeding'  %> </span> </h2>
+
+<br>
+
+<table class="table table-hover">
+	<thead>
+		<% InProceeding.rendered_fields.each do |f| %>
+			<td><b><%=f %></b></td>
+		<% end %>
+	</thead>
+	<% @page.get_in_proceedings.each do |in_proceeding| %>
+		<tr>
+			<% InProceeding.rendered_fields.each do |f| %>
+				<td><%= in_proceeding.send(f) %></td>
+			<% end %>
+			<td style="font-weight: 600"><%= link_to 'Edit', '/' + @page.id.to_s + '/in_proceedings/' + in_proceeding.id.to_s %></td>
+		</tr>
+	<% end %>
+</table>
 
 <br> <br> <br> <br>
 <h4> OUTPUT BIBTEX <h4 style="font-weight: bold">  <%= link_to 'Download', '/' + @page.id.to_s + '/export'  %> </h4> </h4>

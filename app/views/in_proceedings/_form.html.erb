@@ -1,4 +1,4 @@
-<%= form_for(in_proceeding) do |f| %>
+<%= form_for(in_proceeding, :url => '/' + @page.id.to_s + '/in_proceedings/' + in_proceeding.id.to_s) do |f| %>
   <% if in_proceeding.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(in_proceeding.errors.count, "error") %> prohibited this in_proceeding from being saved:</h2>

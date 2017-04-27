@@ -12,7 +12,7 @@ class Page < ApplicationRecord
     Book.where(page_id: id)
   end
 
-  def get_inproceedings
+  def get_in_proceedings
     InProceeding.where(page_id: id)
   end
 
@@ -31,7 +31,7 @@ class Page < ApplicationRecord
       output += "\n\n"
     end
 
-    get_inproceedings.each do |i|
+    get_in_proceedings.each do |i|
       output += i.to_bibtex
       output += "\n\n"
     end
