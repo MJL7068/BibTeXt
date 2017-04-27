@@ -1,13 +1,8 @@
-Given(/^create page is selected$/) do
-  visit "/"
-  click_on "Create new bibtex document"
-end
-
 Given(/^create new article reference is selected$/) do
-  click_on "Create new"
+  first('.new-article').click_link('Create new')
 end
 
-When(/^no fields are given$/) do
+When(/^no article fields are given$/) do
   click_on "Create Article"
 end
 
