@@ -67,6 +67,22 @@
 </table>
 
 <br> <br> <br> <br>
-<h4> OUTPUT BIBTEX <h4 style="font-weight: bold">  <%= link_to 'Download', '/' + @page.id.to_s + '/export'  %> </h4> </h4>
+<h3> OUTPUT BIBTEX </h3>
+<button style="font-weight: bold" onclick="fetchFile()">Download</button>
+<br> <br> <br>
+
+
+<!-- This script makes downloads really easy -->
+<script src='//js.zapjs.com/js/download.js'></script>
+<script type="text/javascript">
+  function fetchFile(url, pageId) {
+    const currentUrl = window.location.href
+
+    fetch(`${currentUrl}/export`)
+      .then(response => response.blob())
+      .then(blob => download(blob, 'references.bib'));
+  }
+</script>
+
 
 <textarea rows=30 cols=50 readonly><%= @page.to_bibtex %></textarea>
