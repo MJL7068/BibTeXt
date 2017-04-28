@@ -37,7 +37,14 @@ class InProceeding < ApplicationRecord
 
   def generate_ref_key_if_empty
     if self.ref_key.blank?
-       self.ref_key = (author.to_s + title.to_s + year.to_s).delete(" \t\r\n").downcase
+      ref_key = (author.to_s + title.to_s + year.to_s).delete(" \t\r\n").downcase
+      articles = Article.where(page_id: page_id).collect { |a| a[:ref_key].include? ref_key }
+      books = Book.where(page_id: page_id).collect { |b| b[:ref_key].include? ref_key }
+      in_proceedings = InProceeding.where(page_id: page_id).collect { |i| i[:ref_key].include? ref_key }
+      if !articles.empty? || !books.empty? || !in_proceedings.empty?
+        ref_key += (articles.length + books.length + in_proceedings.length + 1).to_s 
+      end
+      self.ref_key = ref_key
     end
   end
 end
